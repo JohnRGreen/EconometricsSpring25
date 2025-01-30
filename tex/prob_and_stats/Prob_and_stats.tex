@@ -2,13 +2,15 @@
 % Inbuilt themes in beamer
 \documentclass[aspectratio=169]{beamer}
 \usepackage{graphicx}
+\usepackage{hyperref}
 % Theme choice:
 \usetheme{CambridgeUS}
 
 % Title page details: 
-\title{Econometrics Discussion Section 2} 
+\title{Probability and Statistics Review \\
+        \large Econometrics discussion section 1} 
 \author{John Green}
-\date{Spring 2024}
+\date{Spring 2025}
 
 
 \begin{document}
@@ -18,22 +20,45 @@
     \titlepage 
 \end{frame}
 
+% housekeeping
+\begin{frame}{Housekeeping}
+    \begin{itemize}
+        \item Introductions: name, major, thoughts about econometrics
+        \item For now, office hour in Brody Cafe, Tuesdays, 3-4PM
+        \begin{itemize}
+            \item May change to Wyman Park 601A
+            \item Timing poll: \href{bit.ly/metricsOH}{bit.ly/metricsOH}
+        \end{itemize}
+        \item What will we do in sections?
+        \begin{itemize}
+            \item Cover important topics
+            \item Practice problems
+            \item Stata practice
+            \item Slides and resources in GitHub repo: \href{github.com/JohnRGreen/EconometricsSpring25}{github.com/JohnRGreen/EconometricsSpring25}
+        \end{itemize}
+        \item Sign in for attendance each week
+    \end{itemize}
+\end{frame}
+
 % Outline frame
 \begin{frame}{Recap}
-    What did we do in the first week?
+    What have we covered so far?
     \begin{itemize}
         \item Review of probability and statistics (Stock \& Watson chapters 2 and 3)
-        \item Random variables and their first 4 moments
-        \item Marginal and joint distributions
-        \item LLN and CLT
-        \item Properties of estimators: consistency, unbiasedness, normal approximation
+        \item Random variables and their first 2 moments
+        \item Marginal, joint and conditional distributions
+        \item Independence
+        \item Covariance and correlation
+        \item Law of Iterated Expectations
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Recap}
-    What about in the second week?
+    Still to come (probably):
     \begin{itemize}
-        \item Estimator for $\sigma^2$
+        \item Normal, Fisher (F), $\chi^2$ distributions      
+        \item LLN and CLT
+        \item Estimators and their properties: consistency, unbiasedness, normal approximation
         \item One variable t-test
         \item Two variable t-test
     \end{itemize}
@@ -41,14 +66,20 @@
 
 \begin{frame}{Random variables}
     \begin{itemize}
-        \item A random variable is a \textit{function} from a space of possible outcomes to (usually) the real numbers.
-        \item Example: 
-        \begin{itemize}
-            \item Roll two dice and add up the numbers
-            \item Sample space is all the possible rolls of the two dice (how many?)
-            \item Outcome space is all the possible sums of those rolls (how many?)
-            \item The sum is a random variable
-        \end{itemize} 
+        \item A random variable is a \textit{function} from a space of possible outcomes to (usually) some subset of real numbers.
+        \item May be discrete or continuous
+        \item Roll two dice and add up the numbers (discrete)
+            \begin{itemize}
+                \item Sample space is all the possible rolls of the two dice (how many?)
+                \item Outcome space is all the possible sums of those rolls (how many?)
+                \item The sum is a random variable
+            \end{itemize}
+        \item Height of a person (continuous, but bounded)
+            \begin{itemize}
+                \item Sample space is all people; might think about characterizing them by some covariates such as weight, age, etc.
+                \item Outcome space is all possible heights (what would this be?)
+            \end{itemize}
+        \item Thinking about probability is different for discrete and continuous cases
     \end{itemize}
 \end{frame}
 
@@ -126,7 +157,7 @@
 \begin{frame}{Covariance}
     \begin{itemize}
         \item The covariance of two random variables tells us the strength of their \textit{linear} (careful!) relationship
-        \item If two random variables are independent, their covariance is 0
+        \item If two random variables are independent, covariance is 0 (though the reverse is not true)
         \begin{itemize}
             \item What is the covariance in our example?
         \end{itemize}
@@ -138,16 +169,19 @@
 \end{frame}
 
 \begin{frame}{Rules on joint distributions}
-    \begin{itemize}
-        \item If two variables are independent, $P(X=x,Y=y) = P(X=x)*P(Y=y)$
-        \item Conditional probability: $P(X=x|Y=y) = \frac{P(X=x,Y=y)}{P(Y=y)}$
         \begin{itemize}
-            \item This gives us the marginal distribution
-            \item What happens if the events are independent?
+            \item If two variables are independent, $P(X=x,Y=y) = P(X=x)*P(Y=y)$
+            \item Conditional probability: $P(X=x|Y=y) = \frac{P(X=x,Y=y)}{P(Y=y)}$
+            \begin{itemize}
+                \item What happens if the events are independent?
+            \end{itemize}
+            \item Law of iterated expectations says the mean of $Y$ can be written as a weighted average of the mean of $Y|X$: $E[Y] = E[E[Y|X=x]]$
+            \begin{itemize}
+                \item $E[Y] = \sum_x E[Y|X=x]P(X=x)$ in discrete case
+                \item $E[Y] = \int_x E[Y|X=x]f_X(x)dx$ for continuous case
+            \end{itemize}
+            \item Other topics in textbook: Bayes' law, law of total probability, etc.
         \end{itemize}
-        \item Bayes' Rule: $P(X=x|Y=y) = \frac{P(Y=y|X=x)P(X=x)}{P(Y=y)}$
-        \item Law of total probability: $P(X=x) = \sum_y P(X=x,Y=y)$
-    \end{itemize}
 \end{frame}
 
 \begin{frame}{Second example}
@@ -161,7 +195,7 @@
         \item What is the joint probability distribution?
         \item What is the covariance of the 2 rolls?
         \item What is the correlation?
-        \item What is the marginal distribution of the two r.v.?
+        \item What is the marginal distribution of the two r.v.? What is the first moment of each?
     \end{itemize}
 \end{frame}
 
@@ -170,9 +204,27 @@
     \includegraphics[width = 1\textwidth,keepaspectratio]{marginal.png}
 \end{frame}
 
+\begin{frame}{Second example}
+    \begin{itemize}
+        \item New example: 
+        \begin{itemize}
+            \item Roll the first dice
+            \item If first roll $\geq 4$ then we roll the second die and observe its value
+            \item If first roll $\leq 3$ then the second value is simply set to 1
+        \end{itemize}
+        \item What is the marginal distribution of the two r.v.? What are the first two moments of each? $E[X_1] = 3.5$, $var(X_1) = 2.92$, $E[X_2] = 2.25$, $var(X_1) = 3.02$
+        \item What is the covariance of the 2 rolls? $cov(X_1,X_2) = 1.875$
+        \item What is the correlation? $corr(X_1,X_2) = \rho_{X_1,X_2} = 0.63$
+    \end{itemize}
+\end{frame}
+
 \begin{frame}{Normal distribution}
     \begin{itemize}
         \item Two parameters: mean $\mu$ and variance $\sigma^2$
+        \begin{itemize}
+            \item $\mu$ tells us about the location of the distribution (where is it centered?)
+            \item $\sigma$ tells us about the shape of the distribution (what is the spread? what do the tails look like?)
+        \end{itemize}
         \item We can \textit{standardize} a normal random variable X:
         \begin{itemize}
             \item $Z = \frac{X-\mu}{\sigma}$ so $Z \sim N(0,1)$
