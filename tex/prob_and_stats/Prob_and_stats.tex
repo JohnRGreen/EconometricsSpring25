@@ -236,9 +236,16 @@
 
 \begin{frame}{Estimation}
     \begin{itemize}
-        \item We will often be interested in estimating the mean of a distribution
-        \item Example: wait time in Brody Cafe
-        \item Natural estimator is a sample mean:
+        \item So far we have been in the world of probability theory, dealing with random variables and their distributions
+        \item \textit{Statistics} is all about using actual data to make inferences about the world, and so we will often try to find \textit{estimators} for probabilistic objects
+        \item For example, we will often be interested in estimating the mean (average, first moment) of a distribution
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Estimation}
+    \begin{itemize}
+        \item Example: wait time for a coffee at Brody Cafe
+        \item A natural estimator for the population mean is the sample mean:
         \begin{itemize}
             \item Take a survey of people as they walk out of Brody and ask how long they waited
             \item Average the responses
@@ -250,13 +257,28 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Unbiased}
+    \begin{itemize}
+        \item First, $\bar{Y}$ is an \textbf{unbiased} estimator of $\mu_Y$:
+        
+        $$
+        E[\bar{Y}] = \mu_Y
+        $$
+
+        \item In expectation, we get the thing we want!
+    \end{itemize}
+\end{frame}
+
 \begin{frame}{Law of Large Numbers}
     \begin{itemize}
-        \item $E[\bar{Y}] = \mu_Y$ 
-        \item This means that $\bar{Y}$ is an \textit{unbiased} estimator of $\mu_Y$
-        \item As our sample size grows, the sample mean will converge to the true mean
-        \item $var(\bar{Y}) = \frac{\sigma_Y^2}{n}$ so that the variance of our estimator is decreasing as our sample gets larger
-        \item So as our sample size grows, the sample mean will converge to the true mean: $\bar{Y}$ is a \textit{consistent} estimator of $\mu_Y$ (LLN)
+        \item Second, $\bar{Y}$ is a \textbf{consistent} estimator of $\mu_Y$
+        \item Mathematically, this means that for any number $\epsilon$ we choose, we know that
+        $$
+            \text{lim}_{n \to \inf} P(|\bar{Y} - \mu_Y| > \epsilon) = 0
+        $$
+        \item In plain English: the larger our sample size, the better our guess for $\mu_Y$
+        \item As our sample gets infinitely large, we get infinitesimally close
+        \item This follows from the \textbf{Law of Large Numbers}
     \end{itemize}
 \end{frame}
 
@@ -265,10 +287,24 @@
     \includegraphics[width = .8\textwidth,keepaspectratio]{LLN.png}
 \end{frame}
 
+\begin{frame}{Efficiency}
+    \begin{itemize}
+        \item Lastly, we can think about the \textit{efficiency} of the estimator: what is its variance?
+        \item In this case, $var(\bar{Y}) = \frac{\sigma_Y^2}{n}$
+        \item In other words, the variance decreases as the sample gets larger, at a rate of $\frac{1}{n}$
+        \item We can use this to compare the efficiency of two estimators, for example if we had another estimator with variance $\frac{\sigma_Y^2}{\sqrt{n}}$ we can say that the sample mean is more efficient
+    \end{itemize}
+    Now let's look at the most remarkable result about the sample mean.
+\end{frame}
+
 \begin{frame}{Central Limit Theorem}
     \begin{itemize}
-        \item Even better: as $n \to \infty$, $\bar{Y}$ becomes normal ie $\bar{Y} \sim N(\mu_Y,\frac{\sigma_Y^2}{n})$
-        \item This means that we can use the normal distribution to make inferences about the sample mean
+        \item The central limit theorem tells us that $\bar{Y}$ is \textit{asymptotically normal}: 
+        $$
+            \sqrt{n} (\bar{Y} - \mu_Y) \xrightarrow{d} N(0,\sigma_Y^2)
+        $$
+        \item In other words, as $n \to \infty$, $\bar{Y}$ follows a normal distribution, $\bar{Y} \sim N(\mu_Y,\frac{\sigma_Y^2}{n})$
+        \item This means we can use the normal distribution to make inferences about sample mean
         \item To make it easy, we can standardize the sample mean: $Z = \frac{\bar{Y} - \mu_Y}{\sigma_Y/\sqrt{n}} \sim N(0,1)$
         \item We will use the sample variance as an estimator for the population variance, just like we do for mean (but we will need to correct a small bias)
     \end{itemize}

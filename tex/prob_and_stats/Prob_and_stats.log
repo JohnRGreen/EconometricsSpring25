@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.7.26)  30 JAN 2025 12:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.7.26)  6 FEB 2025 10:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -845,19 +845,13 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 [19
 
 ]
-<LLN.png, id=554, 362.3136pt x 217.2918pt>
-File: LLN.png Graphic file (type png)
-<use LLN.png>
-Package pdftex.def Info: LLN.png  used on input line 266.
-(pdftex.def)             Requested size: 346.67653pt x 207.9114pt.
-
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [20
 
- <./LLN.png>]
+]
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
  []
@@ -865,13 +859,19 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 [21
 
 ]
+<LLN.png, id=609, 362.3136pt x 217.2918pt>
+File: LLN.png Graphic file (type png)
+<use LLN.png>
+Package pdftex.def Info: LLN.png  used on input line 288.
+(pdftex.def)             Requested size: 346.67653pt x 207.9114pt.
+
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [22
 
-]
+ <./LLN.png>]
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
  []
@@ -879,19 +879,13 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 [23
 
 ]
-<size_and_power.png, id=663, 260.47313pt x 85.82062pt>
-File: size_and_power.png Graphic file (type png)
-<use size_and_power.png>
-Package pdftex.def Info: size_and_power.png  used on input line 310.
-(pdftex.def)             Requested size: 260.00905pt x 85.66847pt.
-
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [24
 
- <./size_and_power.png>]
+]
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
  []
@@ -906,11 +900,38 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 [26
 
 ]
+<size_and_power.png, id=743, 260.47313pt x 85.82062pt>
+File: size_and_power.png Graphic file (type png)
+<use size_and_power.png>
+Package pdftex.def Info: size_and_power.png  used on input line 346.
+(pdftex.def)             Requested size: 260.00905pt x 85.66847pt.
+
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [27
+
+ <./size_and_power.png>]
+Overfull \hbox (105.05408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[28
+
+]
+Overfull \hbox (105.05408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[29
+
+]
+Overfull \hbox (105.05408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[30
 
 ]
 \tf@nav=\write6
@@ -927,18 +948,18 @@ Package rerunfilecheck Info: File `Prob_and_stats.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21987 strings out of 476024
- 430512 string characters out of 5794016
+ 22008 strings out of 476024
+ 430927 string characters out of 5794016
  1868382 words of memory out of 5000000
- 41921 multiletter control sequences out of 15000+600000
+ 41936 multiletter control sequences out of 15000+600000
  524082 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,501b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Prob_and_stats.pdf (27 pages, 279960 bytes).
+Output written on Prob_and_stats.pdf (30 pages, 289175 bytes).
 PDF statistics:
- 855 PDF objects out of 1000 (max. 8388607)
- 762 compressed objects within 8 object streams
- 55 named destinations out of 1000 (max. 500000)
+ 935 PDF objects out of 1000 (max. 8388607)
+ 838 compressed objects within 9 object streams
+ 61 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
