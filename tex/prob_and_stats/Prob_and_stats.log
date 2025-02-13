@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.7.26)  6 FEB 2025 10:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.7.26)  13 FEB 2025 14:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -537,31 +537,128 @@ Package: amsthm 2020/05/29 v2.20.6
 ) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasethemes.sty)) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemedefault.sty (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
 \beamer@dima=\dimen292
 \beamer@dimb=\dimen293
-) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty))) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeCambridgeUS.sty (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemebeaver.sty)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty))) (c:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box76
+) (c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen294
+\pgf@nodesepend=\dimen295
+) (c:/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen296
+\pgffor@skip=\dimen297
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
+)) (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count334
+\pgfplotmarksize=\dimen298
+)
+\tikz@lastx=\dimen299
+\tikz@lasty=\dimen300
+\tikz@lastxsaved=\dimen301
+\tikz@lastysaved=\dimen302
+\tikz@lastmovetox=\dimen303
+\tikz@lastmovetoy=\dimen304
+\tikzleveldistance=\dimen305
+\tikzsiblingdistance=\dimen306
+\tikz@figbox=\box77
+\tikz@figbox@bg=\box78
+\tikz@tempbox=\box79
+\tikz@tempbox@bg=\box80
+\tikztreelevel=\count335
+\tikznumberofchildren=\count336
+\tikznumberofcurrentchild=\count337
+\tikz@fig@count=\count338
+ (c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count339
+\pgfmatrixcurrentcolumn=\count340
+\pgf@matrix@numberofcolumns=\count341
+)
+\tikz@expandcount=\count342
+ (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2022/texmf-dist/tex/latex/pgfplots/pgfplots.sty (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+ (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks47
+\t@pgfplots@tokb=\toks48
+\t@pgfplots@tokc=\toks49
+\pgfplots@tmpa=\dimen307
+\c@pgfplots@coordindex=\count343
+\c@pgfplots@scanlineindex=\count344
+ (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks50
+\t@pgf@tokb=\toks51
+\t@pgf@tokc=\toks52
+(c:/texlive/2022/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count345
+) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count346
+\t@pgfplotstable@a=\toks53
+) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count347
+ (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen308
+\pgfdecoratedremainingdistance=\dimen309
+\pgfdecoratedinputsegmentcompleteddistance=\dimen310
+\pgfdecoratedinputsegmentremainingdistance=\dimen311
+\pgf@decorate@distancetomove=\dimen312
+\pgf@decorate@repeatstate=\count348
+\pgfdecorationsegmentamplitude=\dimen313
+\pgfdecorationsegmentlength=\dimen314
+)
+\tikz@lib@dec@box=\box81
+) (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count349
+\pgfplots@xmin@reg=\dimen315
+\pgfplots@xmax@reg=\dimen316
+\pgfplots@ymin@reg=\dimen317
+\pgfplots@ymax@reg=\dimen318
+\pgfplots@zmin@reg=\dimen319
+\pgfplots@zmax@reg=\dimen320
+) (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetween.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
+\pgf@intersect@solutions=\count350
+)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.softclip.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.code.tex))) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex)) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeCambridgeUS.sty (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemebeaver.sty)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count334
-\l__pdf_internal_box=\box76
+\l__color_backend_stack_int=\count351
+\l__pdf_internal_box=\box82
 ) (./Prob_and_stats.aux)
 \openout1 = `Prob_and_stats.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -599,77 +696,77 @@ LaTeX Font Info:    ... okay on input line 16.
 
 (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count335
-\scratchdimen=\dimen294
-\scratchbox=\box77
-\nofMPsegments=\count336
-\nofMParguments=\count337
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count338
-\MPscratchDim=\dimen295
-\MPnumerator=\count339
-\makeMPintoPDFobject=\count340
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count352
+\scratchdimen=\dimen321
+\scratchbox=\box83
+\nofMPsegments=\count353
+\nofMParguments=\count354
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count355
+\MPscratchDim=\dimen322
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
+\everyMPtoPDFconversion=\toks55
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 20.
  (./Prob_and_stats.out) (./Prob_and_stats.out)
 \@outlinefile=\write5
 \openout5 = `Prob_and_stats.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 16.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 16.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 20.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 16.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 16.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 16.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 16.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 20.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 16.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 16.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 16.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 20.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 16.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 16.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 16.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 20.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 16.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 16.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 16.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 16.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 16.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 16.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 16.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 16.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 16.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 16.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 20.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 20.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 16.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 20.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 16.
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 20.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 16.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 20.
  (c:/texlive/2022/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (c:/texlive/2022/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -682,8 +779,13 @@ Dictionary: translator-months-dictionary, Language: English
 Dictionary: translator-numbers-dictionary, Language: English 
 ) (c:/texlive/2022/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./Prob_and_stats.nav)
-Overfull \hbox (105.05408pt too wide) in paragraph at lines 16--16
+)
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
+ on input line 20.
+
+(./Prob_and_stats.nav)
+Overfull \hbox (105.05408pt too wide) in paragraph at lines 20--20
  [][][][]  
  []
 
@@ -709,15 +811,15 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 [3
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 65.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 69.
  (c:/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
@@ -738,7 +840,7 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 <dice.png, id=171, 209.28188pt x 116.93687pt>
 File: dice.png Graphic file (type png)
 <use dice.png>
-Package pdftex.def Info: dice.png  used on input line 89.
+Package pdftex.def Info: dice.png  used on input line 93.
 (pdftex.def)             Requested size: 216.67201pt x 121.06546pt.
 
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
@@ -807,7 +909,7 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 <marginal.png, id=418, 318.18875pt x 131.49126pt>
 File: marginal.png Graphic file (type png)
 <use marginal.png>
-Package pdftex.def Info: marginal.png  used on input line 205.
+Package pdftex.def Info: marginal.png  used on input line 209.
 (pdftex.def)             Requested size: 433.34402pt x 179.07852pt.
 
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
@@ -862,7 +964,7 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 <LLN.png, id=609, 362.3136pt x 217.2918pt>
 File: LLN.png Graphic file (type png)
 <use LLN.png>
-Package pdftex.def Info: LLN.png  used on input line 288.
+Package pdftex.def Info: LLN.png  used on input line 292.
 (pdftex.def)             Requested size: 346.67653pt x 207.9114pt.
 
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
@@ -900,11 +1002,44 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 [26
 
 ]
-<size_and_power.png, id=743, 260.47313pt x 85.82062pt>
-File: size_and_power.png Graphic file (type png)
-<use size_and_power.png>
-Package pdftex.def Info: size_and_power.png  used on input line 346.
-(pdftex.def)             Requested size: 260.00905pt x 85.66847pt.
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Package pgfplots info on input line 403: fill between: activating layered graphics
+\pgf@layerbox@axis background=\box84
+\pgf@layerboxsaved@axis background=\box85
+\pgf@layerbox@axis grid=\box86
+\pgf@layerboxsaved@axis grid=\box87
+\pgf@layerbox@axis ticks=\box88
+\pgf@layerboxsaved@axis ticks=\box89
+\pgf@layerbox@axis lines=\box90
+\pgf@layerboxsaved@axis lines=\box91
+\pgf@layerbox@axis tick labels=\box92
+\pgf@layerboxsaved@axis tick labels=\box93
+\pgf@layerbox@pre main=\box94
+\pgf@layerboxsaved@pre main=\box95
+\pgf@layerbox@axis descriptions=\box96
+\pgf@layerboxsaved@axis descriptions=\box97
+\pgf@layerbox@axis foreground=\box98
+\pgf@layerboxsaved@axis foreground=\box99
+Package pgfplots info on input line 403: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
 
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
@@ -912,7 +1047,7 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 
 [27
 
- <./size_and_power.png>]
+]
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
  []
@@ -920,6 +1055,19 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
 [28
 
 ]
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Package pgfplots info on input line 466: fill between: activating layered graphics
+Package pgfplots info on input line 466: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
+
 Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  [][][][]  
  []
@@ -932,6 +1080,40 @@ Overfull \hbox (105.05408pt too wide) has occurred while \output is active
  []
 
 [30
+
+]
+Overfull \hbox (105.05408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[31
+
+]
+Overfull \hbox (105.05408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[32
+
+]
+<size_and_power.png, id=904, 260.47313pt x 85.82062pt>
+File: size_and_power.png Graphic file (type png)
+<use size_and_power.png>
+Package pdftex.def Info: size_and_power.png  used on input line 515.
+(pdftex.def)             Requested size: 260.00905pt x 85.66847pt.
+
+Overfull \hbox (105.05408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[33
+
+ <./size_and_power.png>]
+Overfull \hbox (105.05408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[34
 
 ]
 \tf@nav=\write6
@@ -948,18 +1130,18 @@ Package rerunfilecheck Info: File `Prob_and_stats.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22008 strings out of 476024
- 430927 string characters out of 5794016
- 1868382 words of memory out of 5000000
- 41936 multiletter control sequences out of 15000+600000
- 524082 words of font info for 74 fonts, out of 8000000 for 9000
+ 36114 strings out of 476024
+ 873089 string characters out of 5794016
+ 1870382 words of memory out of 5000000
+ 55832 multiletter control sequences out of 15000+600000
+ 525732 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,501b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Prob_and_stats.pdf (30 pages, 289175 bytes).
+ 128i,16n,122p,833b,1920s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Prob_and_stats.pdf (34 pages, 305635 bytes).
 PDF statistics:
- 935 PDF objects out of 1000 (max. 8388607)
- 838 compressed objects within 9 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 1042 PDF objects out of 1200 (max. 8388607)
+ 940 compressed objects within 10 object streams
+ 69 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

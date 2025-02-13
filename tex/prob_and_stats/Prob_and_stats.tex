@@ -3,6 +3,10 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+
 % Theme choice:
 \usetheme{CambridgeUS}
 
@@ -314,18 +318,183 @@
     \begin{itemize}
         \item We can use the normal approximation to perform a \textit{hypothesis test}
         \begin{itemize}
-            \item One-sided or two-sided
+            \item Set a null hypothesis, eg $\mu_Y = \mu_{Y,0}$
+            \item Usually we make the null the thing we "want" to disprove; if we reject the null, then we have evidence for our alternative hypothesis, eg $\mu_Y \neq \mu_{Y,0}$
         \end{itemize}
         \item Intuition: assuming the true mean is some value $\mu_{Y,0}$, how likely is it that we would observe the sample mean $\bar{Y}$?
         \begin{itemize}
             \item If it is ``very'' unlikely, we will reject the null
             \item If it is ``reasonably likely'' then we fail to reject the null
         \end{itemize}
-        \item p-value: probability of a test statistic at least as unlikely as the one you observe (under the null)
+        \item Alternative perspective: what would I have to see to convince myself \textit{that my hypothesis is wrong}?
+        \item Usually, we standardize everything and create a $t-statistic$
+        \begin{itemize}
+            \item We test $t$ under the null that $t \sim N(0,1)$ rather than work directly with the sample mean
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Some other terminology}
+\begin{frame}{Hypothesis testing (cont.)}
+    \begin{itemize}
+        \item Set a given significance $\alpha$ and find the \textit{critical value(s)}
+        \begin{itemize}
+            \item ie the value(s) such that the sum in the tails (or tail) of the standard normal distribution is $\alpha$
+        \end{itemize}
+        \item A common value is $\alpha=0.05$, with critical values $c_1=-1.96$ and $c_2 = 1.96)$
+        \item In this test, the probability of getting a $t$ less than $-1.96$ or greater than $1.96$ is 0.05
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{2-tailed test with $\alpha$ = 0.05}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.9]
+    \begin{axis}[
+        axis lines=middle,
+        % xlabel=$z$,
+        % ylabel=$f(z)$,
+        % xlabel style={at={(axis description cs:1,-0.1)},anchor=west},
+        % ylabel style={anchor=south},
+        xtick={-3,-2,-1,0,1,2,3},
+        xmin=-3.5,
+        xmax=3.5,
+        ymin=0,
+        ymax=0.45,
+        samples=100,
+        clip=false
+    ]
+    
+    % Define the normal distribution curve
+    \addplot[name path=curve, thick, blue, domain=-3.5:3.5] {1/sqrt(2*pi)*exp(-x^2/2)};
+        
+    % Define the x-axis baseline
+    \addplot[name path=axis, domain=-3.5:3.5] {0};
+
+    % Fill the area to the left of -1.96
+    \addplot[blue!30, fill opacity=0.5] fill between[of=curve and axis, soft clip={domain=-3.5:-1.96}];
+
+    % Fill the area to the right of 1.96
+    \addplot[blue!30, fill opacity=0.5] fill between[of=curve and axis, soft clip={domain=1.96:3.5}];
+
+    % Normal distribution curve again (to make it visible over shading)
+    % \addplot[thick, blue, domain=-3.5:3.5] {1/sqrt(2*pi)*exp(-x^2/2)};
+    
+    % Shaded area to the left of z = -0.5
+    % \addplot[blue!30, fill] fill between[of=curve and axis, soft clip={domain=-3.5:-0.5}];
+        
+    % Compute the function value at z = -1.96
+    \pgfmathsetmacro{\fxa}{1/sqrt(2*pi)*exp(-1.96^2/2)}
+
+    % Markers for critical values
+    \addplot[red, thick] coordinates {(-1.96,0) (-1.96,\fxa)};
+    \node[above] at (axis cs:-1.7, 0) {$c_1$};
+    
+    % % Compute the function value at z = 1.96
+    \pgfmathsetmacro{\fxb}{1/sqrt(2*pi)*exp(-1.96^2/2)}
+
+    % Markers for critical values
+    \addplot[red, thick] coordinates {(1.96,0) (1.96,\fxb)};
+    \node[above] at (axis cs:1.7, 0) {$c_2$};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Hypothesis testing (cont.)}
+    \begin{itemize}
+        \item Set a given significance $\alpha$ and find the \textit{critical value(s)}
+        \begin{itemize}
+            \item ie the value(s) such that the sum in the tails (or tail) of the standard normal distribution is $\alpha$
+        \end{itemize}
+        \item A common value is $\alpha=0.05$, with critical values $c_1=-1.96$ and $c_2 = 1.96)$
+        \item In this test, the probability of getting a $t$ less than $-1.96$ or greater than $1.96$ is 0.05
+        \item Our decision procedure is that we reject (fail to accept) the null hypothesis if $|t| > 1.96$
+        \begin{itemize}
+            \item Intuition: under the null, it is very unlikely we observe a $t$ in the tails. Thus we reject the null if we do so.
+        \end{itemize}
+        \item Alternatively, if $|t| < 1.96 $ then we fail to reject $H_0$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Standard Normal Distribution}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.8]
+    \begin{axis}[
+        axis lines=middle,
+        % xlabel=$z$,
+        % ylabel=$f(z)$,
+        % xlabel style={at={(axis description cs:1,-0.1)},anchor=west},
+        % ylabel style={anchor=south},
+        xtick={-3,-2,-1,0,1,2,3},
+        xmin=-3.5,
+        xmax=3.5,
+        ymin=0,
+        ymax=0.45,
+        samples=100,
+        clip=false
+    ]
+    
+    % Define the normal distribution curve
+    \addplot[name path=curve, thick, blue, domain=-3.5:3.5] {1/sqrt(2*pi)*exp(-x^2/2)};
+        
+    % Define the x-axis baseline
+    \addplot[name path=axis, domain=-3.5:3.5] {0};
+
+    % Fill the area to the left of z = -0.5
+    \addplot[blue!30, fill opacity=0.5] fill between[of=curve and axis, soft clip={domain=-3.5:-0.5}];
+
+    % Normal distribution curve again (to make it visible over shading)
+    % \addplot[thick, blue, domain=-3.5:3.5] {1/sqrt(2*pi)*exp(-x^2/2)};
+    
+    % Shaded area to the left of z = -0.5
+    % \addplot[blue!30, fill] fill between[of=curve and axis, soft clip={domain=-3.5:-0.5}];
+        
+    % Compute the function value at z = -0.5
+    \pgfmathsetmacro{\fx}{1/sqrt(2*pi)*exp(-0.5^2/2)}
+
+    % Marker at z = -0.5
+    % \draw[red, thick] (-0.5,0) -- (-0.5,\fx);
+    \addplot[red, thick] coordinates {(-0.5,0) (-0.5,\fx)};
+    \node[below] at (axis cs:-0.5, 0) {$z$};
+    
+    \end{axis}
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Calculating p-value}
+    \begin{itemize}
+        \item Alternatively we might focus on the \textit{p-value}: probability of a test statistic at least as unlikely as the one you observe (under the null)
+            $$ P(x > |t|) $$
+        \item So, the \textbf{p-value} tells us how unlikely the null hypothesis is:
+        \begin{itemize}
+            \item  $P_{H_0}(|\frac{\bar{Y} - \mu_{Y,0}}{\sigma_Y/\sqrt{n}}|\geq |\frac{\bar{Y}_{data} - \mu_{Y,0}}{\sigma_Y/\sqrt{n}}|)$
+            \item RHS is just a number! LHS is RV with known distribution under null
+            \item CLT tells us this \textbf{t-statistic} is N(0,1) so probability in tails is easy to look up
+        \end{itemize}
+        \item If observed t-statistic is very large or very small, then p-value is very small and we reject the null
+        \begin{itemize}
+            \item If the null had been true, it is very unlikely that we would have observed the t-statistic
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Confidence interval}
+    \begin{itemize}
+        \item Comparing p-value to $\alpha$ is equivalent to comparing $t$ to $c$ 
+        \item In either case, more rigorous to pre-set our rejection region
+        \item We can also construct a \textit{confidence interval} for $\mu_X$ based on our data: the set of all possible $\mu_X$ values which would not be rejected by a two-sided t-test with size $\alpha$
+            $$\bar{X} \pm c(\alpha) \frac{\sigma_X}{\sqrt{n}} = \left( -c(\alpha) \frac{\sigma_X}{\sqrt{n}}, c(\alpha) \frac{\sigma_X}{\sqrt{n}}\right)$$
+        \item Under the null, 95\% of the time we draw a value in this interval
+        \item What would this look like for a one-sided test?
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Some terminology}
     \begin{itemize}
         \item \textbf{Type-1 error}: reject a true null hypothesis
         \begin{itemize}
@@ -345,41 +514,17 @@
     \includegraphics[width = .6\textwidth,keepaspectratio]{size_and_power.png}
 \end{frame}
 
-\begin{frame}{Calculating p-value}
-    \begin{itemize}
-        \item So, the \textbf{p-value} tells us how unlikely the null hypothesis is:
-        \begin{itemize}
-            \item  $P_{H_0}(|\frac{\bar{Y} - \mu_{Y,0}}{\sigma_Y/\sqrt{n}}|\geq |\frac{\bar{Y}_{data} - \mu_{Y,0}}{\sigma_Y/\sqrt{n}}|)$
-            \item RHS is just a number! LHS is RV with known distribution under null
-            \item CLT tells us this \textbf{t-statistic} is N(0,1) so probability in tails is easy to look up
-        \end{itemize}
-        \item If observed t-statistic is very large or very small, then p-value is very small and we reject the null
-        \begin{itemize}
-            \item If the null had been true, it is very unlikely that we would have observed the t-statistic
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Using pre-set significance level}
-    \begin{itemize}
-        \item Alternatively, we can decide that we want to do a test at a given significance $\alpha$ and find the value such that the sum in the tails (or tail) is $\alpha$
-        \item Eg if $\alpha=0.05$, then our cutoff points are $(-1.96,1.96)$
-        \item If our t-statistic is outside of these bounds, we reject the null because it was very unlikely
-        \item This is always less-informative than a p-value; but may be more rigorous to pre-set our rejection region
-        \item We can also construct a confidence interval for $\mu_X$ based on our data, eg $\bar{X} \pm 1.96 \frac{\sigma_X}{\sqrt{n}}$
-        \begin{itemize}
-            \item This is the set of all possible $\mu_X$ values which would not be rejected by a two-sided t-test with $\alpha=0.05$
-        \end{itemize}
-    \end{itemize}
-\end{frame}
 
 \begin{frame}{Hypothesis about difference in means}
     \begin{itemize}
-        \item What if we want to perform a hypothesis on the difference in means between two random variables?
+        \item What if we want to perform a hypothesis on the difference in means between two random variables? For example:
+        $$H_0 : \mu_1 = \mu_2 $$
         \item Simple: combine them to one!
         \begin{itemize}
-            \item $X_3 = \bar{X}_1 - \bar{X}_2$
-            \item This is just a difference of two normal random variables so we can use the normal approximation, t-statistic is just $\frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}}$
+            \item $\mu^* = \mu_1 = \mu_2$
+            \item This is just a difference of two normal random variables so we can use the normal approximation, t-statistic is:
+            
+            $$t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}}$$
         \end{itemize}
         \item What if we want to test hypothesis that the difference is 2?
     \end{itemize}
