@@ -302,4 +302,219 @@
     \end{itemize}
 \end{frame}
 
+
+\begin{frame}{Consistency and bias}
+    \begin{itemize}
+        \item There are many features we would like our estimators to have: being \textit{consistent} and \textit{unbiased} are (usually) two of them
+        \item Let's say we have an estimator $\hat{\theta}(x_i)$ for some statistic $\theta$
+        \begin{itemize}
+            \item $\bar{x}$ is estimator for $\mu_x$, $\hat{\beta}^{OLS}$ is estimator for $\beta$
+            \item In other words, we look at some data $x_i$, use it to come up with a ``best guess'' for the $\theta$
+        \end{itemize}
+        \item Consistent: as our sample size grows, the estimator converges to the true value of the parameter
+        \begin{itemize}
+            \item $\hat{\theta}(x_i) \xrightarrow{p} \theta$
+        \end{itemize}
+        \item Unbiased: in expectation, our estimator is equal to the true value of the parameter
+        \begin{itemize}
+            \item $\mathbb{E}[\hat{\theta}(x_i) - \theta] = 0 $
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Showing consistency and unbiasedness}
+    \begin{itemize}
+        \item Bias is usually straightforward to show: take the expectation of the estimator, try to show it is equal to the object of interest
+        \item Consistency is (sometimes) trickier
+        \item 3 main tools to take advantage of:
+        \begin{itemize}
+            \item Law of large numbers: as $n \to \infty$, $\bar{x} \xrightarrow{p} \mu_x$
+            \item Central limit theorem: as $n \to \infty$, $\sqrt{n}(\bar{x} - \mu_x) \xrightarrow{d} N(0, \sigma^2)$ eg $\bar{x} \xrightarrow{d} N(\mu_x, \dfrac{\sigma^2}{n})$
+            \item Continuous mapping theorem: if $X_n \xrightarrow{p} X$, $Y_n \xrightarrow{p} Y$, then for continuous functions $g$, $g(X_n, Y_n) \xrightarrow{p} g(X,Y)$
+        \end{itemize}
+        \item Nothing complicated: just take things piece by piece and ask yourself what happens when n gets big
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sample mean}
+    \begin{itemize}
+        \item Random variable $X_i \sim F$, let $\mathbb{E} [X_i] = \mu_x$ and $\text{Var}(X_i) = \sigma^2$
+        \item Sample mean: $\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i$
+        \item Is it biased?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sample mean}
+    \begin{itemize}
+        \item Random variable $X_i \sim F$, let $\mathbb{E} [X_i] = \mu_x$ and $\text{Var}(X_i) = \sigma^2$
+        \item Sample mean: $\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i$
+        \item Is it biased?
+        $$
+        \mathbb{E}[\bar{x}] = \mathbb{E}\left[\frac{1}{n} \sum_{i=1}^n x_i\right] = \frac{1}{n} \sum_{i=1}^n \mathbb{E}[x_i] = \frac{1}{n} n \mu_x = \mu_x
+        $$
+        Unbiased!
+        \item Is it consistent?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sample mean}
+    \begin{itemize}
+        \item Random variable $X_i \sim F$, let $\mathbb{E} [X_i] = \mu_x$ and $\text{Var}(X_i) = \sigma^2$
+        \item Sample mean: $\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i$
+        \item Is it biased?
+        $$
+        \mathbb{E}[\bar{x}] = \mathbb{E}\left[\frac{1}{n} \sum_{i=1}^n x_i\right] = \frac{1}{n} \sum_{i=1}^n \mathbb{E}[x_i] = \frac{1}{n} n \mu_x = \mu_x
+        $$
+        Unbiased!
+        \item Is it consistent?
+        \begin{itemize}
+            \item Of course -- this is exactly what the LLN tells us
+            $$
+                \bar{x} \xrightarrow{p} \mu_x
+            $$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Consistency and bias}
+    \begin{itemize}
+        \item Does bias $\rightarrow$ consistency? \textbf{No!}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Consistency and bias}
+    \begin{itemize}
+        \item Does bias $\rightarrow$ consistency? \textbf{No!}
+        \item Does consistency $\rightarrow$ bias?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Consistency and bias}
+    \begin{itemize}
+        \item Does bias $\rightarrow$ consistency? \textbf{No!}
+        \item Does consistency $\rightarrow$ bias? \textbf{Not true either.}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[shrink]
+    \frametitle{Consistent but biased}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.75\textwidth]{./consistency.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Consistent but biased}
+    \begin{itemize}
+        \item Remember that our estimator for the sample mean is:
+        $$
+            \hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2
+        $$
+        \item This is because the naive estimator is biased:
+        \begin{equation*}
+            \begin{split}
+                \hat{\sigma}_{naive}^2 & = \frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})^2 \\
+                \rightarrow & \\
+                \mathbb{E} [\hat{\sigma}_{naive}^2] & = \dfrac{n-1}{n} \sigma^2
+            \end{split}
+        \end{equation*}
+        \item So there is a bias term of $\dfrac{n-1}{n}$
+        \item But is this estimator consistent?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Consistent but biased}
+    \begin{itemize}
+        \item The naive estimator is biased:
+        \begin{equation*}
+            \begin{split}
+                \hat{\sigma}_{naive}^2 & = \frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})^2 \\
+                \rightarrow & \\
+                \mathbb{E} [\hat{\sigma}_{naive}^2] & = \dfrac{n-1}{n} \sigma^2
+            \end{split}
+        \end{equation*}
+        \item So there is a bias term of $\dfrac{n-1}{n}$
+        \item But is this estimator consistent?
+        \begin{itemize}
+            \item Yes, since $\text{lim}_{n \to \infty} \dfrac{n-1}{n} = 0$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Unbiased but not consistent}
+    \begin{itemize}
+        \item What if we use an extremely naive estimator for $\mu_x$: $X_1$
+        \begin{itemize}
+            \item Take a sample, take the first value, that's our estimator
+        \end{itemize}
+        \item Is this biased?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Unbiased but not consistent}
+    \begin{itemize}
+        \item What if we use an extremely naive estimator for $\mu_x$: $X_1$
+        \begin{itemize}
+            \item Take a sample, take the first value, that's our estimator
+        \end{itemize}
+        \item Is this biased?
+        \begin{itemize}
+            \item No: $\mathbb{E} [ X_1] = \mu_x $
+        \end{itemize}
+        \item Is it consistent?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Unbiased but not consistent}
+    \begin{itemize}
+        \item What if we use an extremely naive estimator for $\mu_x$: $X_1$
+        \begin{itemize}
+            \item Take a sample, take the first value, that's our estimator
+        \end{itemize}
+        \item Is this biased?
+        \begin{itemize}
+            \item \textbf{No}: $\mathbb{E} [ X_1] = \mu_x $
+        \end{itemize}
+        \item Is it consistent?
+        \begin{itemize}
+            \item \textbf{No}: $X_1 \sim F$ and does not depend on $n$; so as $n \to \infty$, $X_1$ does not converge to $\mu_x$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Bias and consistency}
+    \begin{itemize}
+        \item To sum up: in general, we like unbiased and consistent estimators
+        \item Take expectation to check for bias; use CLT + CMT for consistency
+        \item Bias != consistency, and consistency != bias
+        \item Our favorite estimators, eg $\frac{1}{n} \sum_i x_i $ and $\hat{\beta}^{OLS}$, are both consistent and unbiased
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Prediction}
+    \begin{itemize}
+        \item Oftentimes, we are just concerned with predicting a Y-variable:
+        $$
+            \hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i
+        $$
+        \item Will always have some error in our prediction; but important to think about where it comes from
+        \item In general (and in particular with the OLS model) we have at least two sources of error:
+        \begin{itemize}
+            \item The intrinsic error in predicting an uncertain outcome (``oracle'' error; $V_1$ in slides); $\mathbb{E}[u_i^2]$
+            \item Additional error introduced because we are estimating our model with a random sample (``approximation'' error; $V_2$ in slides); $\mathbb{E}\left[\left(\left(\hat{\beta}_0-\beta_0\right)+x_0\left(\hat{\beta}_1-\beta_1\right)\right)^2 \mid X=x_0\right]$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Prediction}
+    \begin{itemize}
+        \item We want to account for both of these when we make a prediction (see example)
+        \item If we only account for sampling error, we will be overconfident in our prediction 
+        \item So, what to do if we want to make good predictions?
+        \item OLS estimator will not be best for out of sample predictions
+        \item Later on, will explore the ``bias-variance'' tradeoff: we may intentionally introduce some bias into our model in order to reduce the variance due to the estimated coefficients, thus getting the error in our model closer to the oracle prediction
+    \end{itemize}
+\end{frame}
+
 \end{document}
