@@ -1,0 +1,331 @@
+
+% Inbuilt themes in beamer
+\documentclass[aspectratio=169]{beamer}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Econometrics Discussion Section 2: Omitted Variable Bias} 
+\author{John Green}
+\date{Spring 2025}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Mis-specified model}
+    \begin{itemize}
+        \item Suppose the true model is:
+        $$
+            Y = \beta_0 + \beta_1 X + \beta_2 Z + \epsilon
+        $$
+        \item But we estimate the mis-specified model:
+        $$
+            Y = \beta_0 + \beta_1 X + u
+        $$
+        where $u = \beta_2 Z + \epsilon$
+        \item We already know that our estimator $\hat{\beta}_1^{OLS}$ for $\beta_1$ will be biased if:
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Mis-specified model}
+    \begin{itemize}
+        \item Suppose the true model is:
+        $$
+            Y = \beta_0 + \beta_1 X + \beta_2 Z + \epsilon
+        $$
+        \item But we estimate the mis-specified model:
+        $$
+            Y = \beta_0 + \beta_1 X + u
+        $$
+        where $u = \beta_2 Z + \epsilon$
+        \item We already know that our estimator $\hat{\beta}_1^{OLS}$ for $\beta_1$ will be biased if \textit{$X$ and $Z$ are correlated}: $cov(X,Z) \neq 0 $.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Mis-specified model}
+    \begin{itemize}
+        \item This is called \textit{omitted variable bias} (OVB): by failing to include a variable in our model, we get a biased (and inconsistent) estimate of $\beta_1$
+        \item The corollary is that we do not have OVB if $X$ and $Z$ are Uncorrelated
+        \begin{itemize}
+            \item Important, since there are \textit{always} going to be omitted variables in the error
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Analyzing the bias}
+    \begin{itemize}
+        \item We can actually work out the bias in $\hat{\beta}_1^{OLS}$ when we omit $Z$:
+        $$
+            \hat{\beta}_1^{OLS} \rightarrow_p \beta_1 + \dfrac{\sigma_u}{\sigma_X} \times \rho_{X,u}
+        $$
+        \item With a careful analysis, we can start to understand the magnitude and direction of the bias
+        \item Focus on first term: $\dfrac{\sigma_u}{\sigma_X}$
+        \item How does bias change with $\sigma_u$ and $\sigma_X$?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Analyzing the bias}
+    \begin{itemize}
+        \item We can actually work out the bias in $\hat{\beta}_1^{OLS}$ when we omit $Z$:
+        $$
+            \hat{\beta}_1^{OLS} \rightarrow_p \beta_1 + \dfrac{\sigma_u}{\sigma_X} \times \rho_{X,u}
+        $$
+        \item How does bias change with $\sigma_u$ and $\sigma_X$?
+        \begin{itemize}
+            \item If $\sigma_u$ is ``large'' relative to $\sigma_X$, then the bias is large
+            \item Or, if $\sigma_X$ is ``small'' relative to $\sigma_u$, then the bias is large (same thing)
+        \end{itemize}
+        \item important to keep in mind what $u$ is: \textbf{not} just $Z$, but $\beta_2 Z$.
+        \item What about $\rho_{X,u}$?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Analyzing the bias}
+    \begin{itemize}
+        \item We can actually work out the bias in $\hat{\beta}_1^{OLS}$ when we omit $Z$:
+        $$
+            \hat{\beta}_1^{OLS} \rightarrow_p \beta_1 + \dfrac{\sigma_u}{\sigma_X} \times \rho_{X,u}
+        $$
+        \item important to keep in mind what $u$ is: \textbf{not} just $Z$, but $\beta_2 Z$.
+        \item What about $\rho_{X,u}$?
+        \item Will depend on two things: 
+        \begin{itemize}
+            \item Relationship between $Z$ and $Y$: $\beta_2$ 
+            \item Relationship between $Z$ and $X$: $cov(X,Z)$ 
+        \end{itemize}
+        \item If they move in different directions, then $\rho_{X,u} < 0$ and the bias is negative; same direction, then $\rho_{X,u} > 0$ and the bias is positive
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#1}
+    \begin{itemize}
+        \item Regress wages on years of education:
+        $$ 
+            w_i = \beta_0 + \beta_1 Educ_i + u_i
+        $$
+        \item What might be omitted?
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example \#1}
+    \begin{itemize}
+        \item Regress wages on years of education:
+        $$ 
+            w_i = \beta_0 + \beta_1 Educ_i + u_i
+        $$
+        \item Omitted variable is field of study: think about becoming a doctor vs. becoming a nurse, or paralegal vs. lawyer
+        \item So ``true'' model is $w_i = \beta_0 + \beta_1 Educ_i + \beta_2 major_i + e_i$
+        \item What direction is bias?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#1}
+    \begin{itemize}
+        \item Regress wages on years of education:
+        $$ 
+            w_i = \beta_0 + \beta_1 Educ_i + u_i
+        $$
+        \item Omitted variable is average time to degree in type of degree: think about becoming a doctor vs. becoming a nurse, or paralegal vs. lawyer
+        \item So ``true'' model is $w_i = \beta_0 + \beta_1 Educ_i + \beta_2 degree_i + e_i$
+        \item $\beta_2 > 0$ (longer time to degree $\rightarrow$ degree brings higher wage)
+        \item $cov(Educ_i, degree_i) > 0 $ (longer time to degree $\rightarrow$ more years of education)
+        \item So bias should be...
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#1}
+    \begin{itemize}
+        \item Regress wages on years of education:
+        $$ 
+            w_i = \beta_0 + \beta_1 Educ_i + u_i
+        $$
+        \item ``True'' model is $w_i = \beta_0 + \beta_1 Educ_i + \beta_2 degree_i + e_i$
+        \item $\beta_2 > 0$ (longer time to degree $\rightarrow$ degree brings higher wage)
+        \item $cov(Educ_i, degree_i) > 0 $ (longer time to degree $\rightarrow$ more years of education)
+        \item So bias should be positive: by ignoring degree type, years of education will appear \textbf{more} important than they really are
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example \#2}
+    \begin{itemize}
+        \item Regress wages on years of experience:
+        $$ 
+            w_i = \beta_0 + \beta_1 exper_i + u_i
+        $$
+        \item What might be omitted?
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example \#2}
+    \begin{itemize}
+        \item Regress wages on years of experience:
+        $$ 
+            w_i = \beta_0 + \beta_1 exper_i + u_i
+        $$
+        \item Omitted variable is health; poor health leads to lower wages, and also keeps you out of the labor force
+        \item So ``true'' model is $w_i = \beta_0 + \beta_1 Educ_i + \beta_2 health_i + e_i$
+        \item What direction is bias?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#2}
+    \begin{itemize}
+        \item Regress wages on years of experience:
+        $$ 
+            w_i = \beta_0 + \beta_1 exper_i + u_i
+        $$
+        \item Omitted variable is health; poor health leads to lower wages, and also keeps you out of the labor force
+        \item ``True'' model is $w_i = \beta_0 + \beta_1 Educ_i + \beta_2 health_i + e_i$
+        \item $\beta_2 < 0$ (poor health $\rightarrow$ lower wages)
+        \item $cov(exper_i, health_i) < 0 $ (poor health $\rightarrow$ less experience)
+        \item So again, bias will be positive; by ignoring health, years of experience will appear \textbf{more} important than they really are
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#3}
+    \begin{itemize}
+        \item Regress wages on GPA:
+        $$ 
+            w_i = \beta_0 + \beta_1 GPA_i + u_i
+        $$
+        \item Omitted variables might be...
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#3}
+    \begin{itemize}
+        \item Regress wages on GPA:
+        $$ 
+            w_i = \beta_0 + \beta_1 GPA_i + u_i
+        $$
+        \item Omitted variable could be difficulty of major, $d_i$
+        \item ``True'' model is $w_i = \beta_0 + \beta_1 GPA_i + \beta_2 d_i + e_i$
+        \item What direction is bias?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#3}
+    \begin{itemize}
+        \item Regress wages on GPA:
+        $$ 
+            w_i = \beta_0 + \beta_1 GPA_i + u_i
+        $$
+        \item Omitted variable could be difficulty of major, $d_i$
+        \item ``True'' model is $w_i = \beta_0 + \beta_1 GPA_i + \beta_2 d_i + e_i$
+        \item Difficulty leads to lower GPA ($cov(GPA_i, d_i) < 0$), but higher wages ($\beta_2 > 0$)
+        \item So direction of bias is...
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#3}
+    \begin{itemize}
+        \item Regress wages on GPA:
+        $$ 
+            w_i = \beta_0 + \beta_1 GPA_i + u_i
+        $$
+        \item Omitted variable could be difficulty of major, $d_i$
+        \item ``True'' model is $w_i = \beta_0 + \beta_1 GPA_i + \beta_2 d_i + e_i$
+        \item Difficulty leads to lower GPA ($cov(GPA_i, d_i) < 0$), but higher wages ($\beta_2 > 0$)
+        \item So direction of bias is negative: GPA will appear \textit{less} important than it really is, since we are ignoring the confounding effect of major.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#4}
+    \begin{itemize}
+        \item Regress wages on GPA:
+        $$ 
+            w_i = \beta_0 + \beta_1 GPA_i + u_i
+        $$
+        \item Another omitted variable could be use of AI
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#4}
+    \begin{itemize}
+        \item Regress wages on GPA:
+        $$ 
+            w_i = \beta_0 + \beta_1 GPA_i + u_i
+        $$
+        \item Another omitted variable could be use of AI
+        \item ``True'' model is $w_i = \beta_0 + \beta_1 GPA_i + \beta_2 AI_i + e_i$
+        \item What direction is bias?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#4}
+    \begin{itemize}
+        \item Regress wages on GPA:
+        $$ 
+            w_i = \beta_0 + \beta_1 GPA_i + u_i
+        $$
+        \item Another omitted variable could be use of AI
+        \item ``True'' model is $w_i = \beta_0 + \beta_1 GPA_i + \beta_2 AI_i + e_i$
+        \item Using AI leads to higher GPA ($cov(GPA_i, AI_i) > 0$), but lower wages ($\beta_2 < 0$) since not learning the skills
+        \item So direction of bias is...
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example \#4}
+    \begin{itemize}
+        \item Regress wages on GPA:
+        $$ 
+            w_i = \beta_0 + \beta_1 GPA_i + u_i
+        $$
+        \item Another omitted variable could be use of AI
+        \item ``True'' model is $w_i = \beta_0 + \beta_1 GPA_i + \beta_2 AI_i + e_i$
+        \item Using AI leads to higher GPA ($cov(GPA_i, AI_i) > 0$), but lower wages ($\beta_2 < 0$) since not learning the skills
+        \item So direction of bias is negative: GPA will appear \textit{less} important than it really is, since we are ignoring the confounding effect of AI.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solutions}
+    \begin{itemize}
+        \item This seems very troubling; lots of variables out there to omit
+        \item What can we do?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solutions}
+    \begin{itemize}
+        \item This seems very troubling; lots of variables out there to omit
+        \item What can we do?
+        \item Include it in the regression! (if you can)
+        \item Use some control variable (instrument) which may proxy for the omitted variable
+        \item Research design: diff-in-diff, RCT
+        \item Advanced techniques: fixed effects, matching methods, regression discontinuity or kink; worst case scenario, try to bound the extent of bias
+    \end{itemize}
+\end{frame}
+
+\end{document}
