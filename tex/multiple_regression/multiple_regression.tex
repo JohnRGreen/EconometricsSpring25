@@ -248,18 +248,19 @@
 
 \begin{frame}{Joint hypothesis test}
     \begin{itemize}
-        \item To test a joint hypothesis, we can use an $F$-statistic which follows a $\chi^2_q$ distribution where $q$ is degrees of freedom
+        \item To test a joint hypothesis, we can use an $F$-statistic which follows an $F-$distribution
+        \begin{itemize}
+            \item Depends on two parameters, both ``degrees of freedom'' ($d_1$ and $d_2$)
+            \item $d_1=q$ is number of restrictions we are testing
+            \item $d_2=n-(k+1)$ is number of observations minus number of parameters estimated (careful to include the intercept)
+            \item In large samples, we often assume $n \rightarrow \infty $
+        \end{itemize}
         \item Intuition: look at the fit of the regression under the null and alternate hypotheses; if fit under the null is much worse than under the alternate, reject the null
         \begin{itemize}
             \item What do we use to check for fit?
             \pause
             \item Test statistic based on $R^2$
-        \end{itemize}
-        \item Just like the Normal distribution is defined by a mean and variance, $\chi^2_q$ is defined by \textit{degrees of freedom}
-        \item In this case, Degrees of freedom is our number of restrictions
-        \begin{itemize}
-            \item Under the hood: this is the number of squared normal random variables in the test statistic
-            \item What might happen as we add in more restrictions?
+            \item If $R^2$ much better for unrestricted regression, then our restriction is likely not true
         \end{itemize}
     \end{itemize}
 \end{frame}

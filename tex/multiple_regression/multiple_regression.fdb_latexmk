@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1744469490.19954 "/Users/johngreen/Library/CloudStorage/OneDrive-JohnsHopkins/TA/metrics25/EconometricsSpring25/tex/multiple_regression/multiple_regression.tex" "multiple_regression.pdf" "multiple_regression" 1744469491.3035 0
-  "/Users/johngreen/Library/CloudStorage/OneDrive-JohnsHopkins/TA/metrics25/EconometricsSpring25/tex/multiple_regression/multiple_regression.tex" 1744469490.02259 14915 42e66496a7458e12bcf5b0ca33835f14 ""
+["pdflatex"] 1744733153.38186 "/Users/johngreen/Library/CloudStorage/OneDrive-JohnsHopkins/TA/metrics25/EconometricsSpring25/tex/multiple_regression/multiple_regression.tex" "multiple_regression.pdf" "multiple_regression" 1744733154.5766 0
+  "/Users/johngreen/Library/CloudStorage/OneDrive-JohnsHopkins/TA/metrics25/EconometricsSpring25/tex/multiple_regression/multiple_regression.tex" 1744733153.19673 14959 baa44c661894dfe8f2d900b683fc737f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -197,10 +197,10 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "figs/heteroskedasticity.png" 1736188814 36089 5a9903e3ee11f9061c4e1010e2890bd9 ""
-  "multiple_regression.aux" 1744469491.2552 3270 4e2f09e13e922e27e4dcc34834bb6aea "pdflatex"
-  "multiple_regression.nav" 1744469491.25597 2225 06f9ed487a4391b15651fdb5d16bbad4 "pdflatex"
-  "multiple_regression.out" 1744469490.58373 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "multiple_regression.tex" 1744469490.02259 14915 42e66496a7458e12bcf5b0ca33835f14 ""
+  "multiple_regression.aux" 1744733154.52611 3270 4e2f09e13e922e27e4dcc34834bb6aea "pdflatex"
+  "multiple_regression.nav" 1744733154.52697 2225 06f9ed487a4391b15651fdb5d16bbad4 "pdflatex"
+  "multiple_regression.out" 1744733153.81284 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "multiple_regression.tex" 1744733153.19673 14959 baa44c661894dfe8f2d900b683fc737f ""
   (generated)
   "multiple_regression.aux"
   "multiple_regression.log"
