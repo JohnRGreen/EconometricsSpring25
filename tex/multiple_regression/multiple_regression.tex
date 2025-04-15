@@ -154,9 +154,47 @@
 
 \begin{frame}{Binary variables}
     \begin{itemize}
-        \item For this reason we need to be careful when we have binary (0/1) variables in our regression (or any kind of categorical variable)
+        \item For this reason we need to be careful when we have binary (0/1) variables (``indicator'' variables) in our regression:
+        \begin{itemize}
+            \item Treatment status
+            \item Gender
+            \item Party affiliation
+        \end{itemize}
         \item We either need to leave one out (the omitted group) or we need to drop our intercept
-        \item Either is fine, just changes interpretation of the coefficient estimates
+        \begin{itemize}
+            \item Either is fine, just changes interpretation of the coefficient estimates
+            \item Failing to do so is sometimes called the the ``dummy variable trap''
+        \end{itemize}
+
+        \pause
+
+        \item Exact same math, intuition, problem and solution extends to \textit{categorical} variables:
+        \begin{itemize}
+            \item Seasonal effects
+            \item Race or ethnicity
+        \end{itemize}
+        \item In practice, we take our categories and create a bunch of dummy variables, so we need to leave one category out as the ``base'' to avoid multicolinearity
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Imperfect multicolinearity}
+    \begin{itemize}
+        \item Perfect multicolinearity is straightforward to deal with; generally speaking, the regression simply will not work
+        \item Slightly trickier is \textit{imperfect} multicolinearity: $X_1$ and $X_2$ are highly correlated
+        \begin{itemize}
+            \item For example, controlling for both age and years of work experience in a wage equation
+        \end{itemize}
+        \item Imperfect multicolinearity will lead to imprecise estimation (large standard errors)
+        \item Intuition: what does the data tell us about the effect of $X_1$ when $X_2$ is held constant?
+        
+        \pause
+
+        \item What can we do?
+
+        \pause
+
+        \item Can check scatterplots: if two variables are essentially linear together, probably only include one of them
+        \item Guided by theory: it's usually obvious if two variables are highly linear
     \end{itemize}
 \end{frame}
 
@@ -193,13 +231,87 @@
 
 \begin{frame}{Hypothesis testing}
     \begin{itemize}
-        \item We already know about the hypothesis test on a single coefficient
-        \item What about a joint hypothesis test? Ie $H_0:~\beta_1 = \beta_2 = 0$ ?
-        \item We want to test these hypotheses jointly, and will do so using an $F$-statistic which follows a $\chi^2_q$ distribution where $q$ is degrees of freedom
-        \item Intuition: look at the fit under the null and alternate hypotheses; if fit under the null is much worse than under the alternate, reject.
-        \item Tests of equality between coefficients, eg $H_0:~\beta_1 = \beta_2$
-        \item Confidence set for coefficients: all combos not rejected under a given test
+        \item We already know about the hypothesis test on a single coefficient: simple t-test with a known distribution
+        \item What about a joint hypothesis test? For example:
+        \begin{itemize}
+            \item $H_0:~\beta_1 = \beta_2 = 0$
+            \item $H_0:~\beta_1 = \alpha_1~\&~\beta_2 = \alpha_2$
+        \end{itemize}
+        \item What is the difference between testing this hypothesis one piece at a time, and testing them together (a \textit{joint} test)?
+        \item What is the alternate hypothesis?
+
+        \pause
+        \item $H_A: \beta_1 \neq \alpha_1~ \text{or} ~\beta_2 \neq \alpha_2)$
+        \item These two events will not be independent: so $P(\beta_1 \neq \alpha_1~ \text{or} ~\beta_2 \neq \alpha_2) $ cannot be derived just by considering the probabilities each on their own with a t-test
     \end{itemize}
 \end{frame}
+
+\begin{frame}{Joint hypothesis test}
+    \begin{itemize}
+        \item To test a joint hypothesis, we can use an $F$-statistic which follows a $\chi^2_q$ distribution where $q$ is degrees of freedom
+        \item Intuition: look at the fit of the regression under the null and alternate hypotheses; if fit under the null is much worse than under the alternate, reject the null
+        \begin{itemize}
+            \item What do we use to check for fit?
+            \pause
+            \item Test statistic based on $R^2$
+        \end{itemize}
+        \item Just like the Normal distribution is defined by a mean and variance, $\chi^2_q$ is defined by \textit{degrees of freedom}
+        \item In this case, Degrees of freedom is our number of restrictions
+        \begin{itemize}
+            \item Under the hood: this is the number of squared normal random variables in the test statistic
+            \item What might happen as we add in more restrictions?
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{F-test}
+    \begin{itemize}
+        \item This F-test is very powerful:
+        \item Can test complex hypotheses over multiple coefficients
+        \item Confidence \textit{set} for coefficients: all combos not rejected under a given test 
+        \item In practice: most common F-test is that ``our data matters''
+        \begin{itemize}
+            \item $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \epsilon $
+            \item F-test for $\beta_1 = \beta_2 = 0 $
+            \item E.g., do we do meaningfully better at explaining variation in $Y$ with our $X$ variables than we would by just taking the mean?
+            \item This F-stat automatically reported in stata
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Hypotheses on coefficient relationships}
+    \begin{itemize}
+        \item Sometimes we may have a hypothesis on how $\beta_1$ and $\beta_2$ relate to each other, but not on their specific values
+        \item Eg $\beta_1 = \beta_2 $ in $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \epsilon $
+        \item Often, we can use simple algebra to rewrite our model in a way that is easy to test:
+        \begin{equation*}
+            \begin{split}
+                Y &= \beta_0 + \beta_1 X_1 + \beta_2 X_2 \\
+                &= \beta_0 + \beta_1 X_1 + \beta_1 X_2 \\
+                &= \beta_0 + \beta_1 \left( X_1 + X_2 \right) \\
+                &= \beta_0 + \beta_1 \left( X_{12} \right)
+            \end{split}
+        \end{equation*}
+        \item So, just make a new variable $X_{12}$ and do an F-test for the restricted regression against the unrestricted regression
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Hypotheses on coefficient relationships}
+    \begin{itemize}
+        \item Might get more complicated, with more coefficients and different relationships
+        \item Math (and code) becomes easier if we can write our restrictions in the form:
+        $$
+        a_1 \beta_1 + a_2 \beta_2 + \dots + a_k \beta_k = 0
+        $$
+        \item Our example is $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \epsilon $ and $ H_0: ~ \beta_1 = \beta_2$
+        \begin{itemize}
+            \item Want to write in the form $a_1 \beta_1 + a_2 \beta_2 = 0$
+            \item What are $a_1$ and $a_2$?
+            \pause
+            \item $ \beta_1 = \beta_2 \rightarrow \beta_1 - \beta_2 = 0$ so $a_1 = 1$ and $a_2 = -1$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
 
 \end{document}
